@@ -30,6 +30,18 @@ namespace Tuples
 
             ExibirResultados(temperatura, umidade);
 
+            //Tupla - Desconstrução
+            (temperatura, umidade) = LeituraSensorTupla();
+
+            ExibirResultados(temperatura, umidade);
+
+            //Tupla - Desconstrução e discard
+            umidade = 0;
+            (temperatura, _) = LeituraSensorTupla();
+
+            ExibirResultados(temperatura, umidade);
+
+
             Console.ReadKey();
         }
 
